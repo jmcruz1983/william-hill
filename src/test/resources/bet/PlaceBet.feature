@@ -13,7 +13,7 @@ Feature: Place a bet
 
   Examples:
     | platform  | value | outcome        |
-    | mobile    | 0.1   | successfully     |
-    | desktop   | 0     | unsuccessfully |
-    | desktop   | 0.1   | successfully     |
+    | mobile    | 0.5   | successfully   |
+    | mobile    | 0     | unsuccessfully |
+    | desktop   | 0.5   | successfully   |
     | desktop   | 0     | unsuccessfully |
