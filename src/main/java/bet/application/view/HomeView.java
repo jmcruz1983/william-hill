@@ -1,11 +1,15 @@
 package bet.application.view;
 
 import java.util.logging.Logger;
-
-import org.openqa.selenium.support.PageFactory;
-
-import bet.application.containers.HomePageContainer;
 import bet.utils.BrowserDriver;
+import org.openqa.selenium.support.PageFactory;
+import bet.application.containers.HomePageContainer;
+
+/*
+ * This class implements the navigation in the homePage
+ * obtaining the webelements from the container class 
+ * decoupling design from navigation
+ */
 
 public class HomeView {
 	private static final Logger LOGGER = Logger.getLogger(HomeView.class.getName());

@@ -3,10 +3,14 @@ package bet;
 import java.util.logging.Logger;
 
 import bet.application.NavigationFactory;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
+
+/*
+ * This class implements the steps specified with the cucumber sintax
+ * it wires up the actions with the navigation flow
+ */
 
 public class BetSteps {
 	private static final Logger LOGGER = Logger.getLogger(BetSteps.class.getName());

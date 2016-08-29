@@ -5,9 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.FindBy;
 
-
-
-import bet.utils.BrowserDriver;
+/*
+ * This class contains all the webElements needed in the login page
+ * WebElemets are located by Xpath as they have static identification
+ * LoginPage container is decouple from the view to allow changes in page outlook
+ * without affecting page flow
+ */
 
 public class LoginPageContainer {
 	@FindBy(how=How.XPATH, xpath ="//*[@id=\"header\"]/section/div[1]")

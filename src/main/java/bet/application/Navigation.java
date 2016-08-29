@@ -4,6 +4,11 @@ import bet.application.view.LoginView;
 import bet.application.view.HomeView;
 import bet.utils.BrowserDriver;
 
+/*
+ * This class contains all the high level flow actions connected to view pages
+ * as Model-View-Controller pattern
+ */
+
 public class Navigation {
 	private User user;
 	private BrowserDriver m_driver;

@@ -1,21 +1,18 @@
 package bet.utils;
 
-import java.awt.Toolkit;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 import java.util.Map;
 import java.util.HashMap;
 
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
 import bet.application.NavigationFactory;
+
+/*
+ * This is a Factory class for browser driver class returning an instance of the driver class
+ */
 
 public class BrowserFactory {
 	private static final Logger LOGGER = Logger.getLogger(BrowserFactory.class.getName());

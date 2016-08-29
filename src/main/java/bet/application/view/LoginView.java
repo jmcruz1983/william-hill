@@ -1,13 +1,17 @@
 package bet.application.view;
 
-import java.io.BufferedReader;
 import java.io.IOException;
+import bet.utils.BrowserDriver;
 import java.io.InputStreamReader;
 import java.util.logging.Logger;
 import org.openqa.selenium.support.PageFactory;
 import bet.application.containers.LoginPageContainer;
-import bet.utils.BrowserDriver;
-import java.io.*;
+
+/*
+ * This class implements the navigation in the loginPage
+ * obtaining the webelements from the container class
+ * decoupling design from navigation
+ */
 
 public class LoginView {
 	private static final Logger LOGGER = Logger.getLogger(LoginView.class.getName());

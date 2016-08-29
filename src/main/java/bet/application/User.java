@@ -1,5 +1,9 @@
 package bet.application;
 
+/*
+ * This is simple User class that implements the creation of a user
+ */
+
 public class User {
 	private String username;
 	private String password;

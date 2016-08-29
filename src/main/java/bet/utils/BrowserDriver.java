@@ -1,23 +1,29 @@
 package bet.utils;
 
-import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import java.util.logging.Logger;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.UnreachableBrowserException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+/*
+ * This classs creates the browse driver that interacts with the webelements
+ * needed in the navigation flow
+ */
 
 public class BrowserDriver {
 	private static final Logger LOGGER = Logger.getLogger(BrowserDriver.class.getName());
 	private static WebDriver m_driver;
-	private static boolean m_mobile;
+	private static boolean m_mobile = false;
 	
-	public BrowserDriver( boolean mobile) {
+	public BrowserDriver(boolean mobile) {
 		m_mobile = mobile;
 	}
 		 
@@ -55,7 +61,6 @@ public class BrowserDriver {
 	public static void loadPage(String url){
 		getCurrentDriver();
         LOGGER.info("Directing browser to:" + url);
-        LOGGER.info("try to loadPage [" + url + "]");
         getCurrentDriver().get(url);
 	}
 	

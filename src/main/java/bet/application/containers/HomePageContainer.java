@@ -7,7 +7,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.By;
 
-import bet.utils.BrowserDriver;
+/*
+ * This class contains all the webElements needed in the home page
+ * WebElemets are located by Xpath when possible and i do lookup when elements have dynamic ids
+ * HomePage container is decouple from the view to allow changes in page outlook
+ * without affecting page flow
+ */
 
 public class HomePageContainer {
 	
@@ -60,15 +65,6 @@ public class HomePageContainer {
  		 */
  		List<WebElement> inputs = element.findElements(By.xpath(".//input"));
  		if(inputs.size() > 0){
- 			/*int index = 0;
- 			for(WebElement s:inputs)
- 			{
- 				index++;
- 				System.out.println(index + "columnDetails : "+s.getText().toString());
- 				if(s.isDisplayed()){
- 	 				s.sendKeys(Integer.toString(index));	
- 				}
- 			}*/
  			betAmountInput = inputs.get(1);
 	 	 	return betAmountInput; 
  		}
