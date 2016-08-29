@@ -36,18 +36,27 @@ public class BrowserFactory {
 		return driver;
 	}
 
-	private static DesiredCapabilities getMobileCapabilities() {
-		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-		capabilities.setCapability(ChromeOptions.CAPABILITY, new ChromeOptions() {
-		{
-		    setExperimentalOption("mobileEmulation", new HashMap<String, Object>() {
-		    	{ put("deviceName", "Google Nexus 5"); } });
-		    }
-		});
+    private static DesiredCapabilities getMobileCapabilities() {
+        LOGGER.info("Emulating mobile on the browser");
+        Map<String, Object> deviceMetrics = new HashMap<String, Object>();
+        deviceMetrics.put("width", 360);
+        deviceMetrics.put("height", 640);
+        deviceMetrics.put("pixelRatio", 3.0);
+
+        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        capabilities.setCapability(ChromeOptions.CAPABILITY, new ChromeOptions() {
+            {
+                setExperimentalOption("mobileEmulation", new HashMap<String, Object>() {
+                    { put("deviceMetrics", deviceMetrics);
+                      put("userAgent", "Mozilla/5.0 (Linux; Android 4.2.1; en-us; Nexus 5 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19");
+                } });
+            }
+        });
         return capabilities;
-	}
+    }
 
 	private static DesiredCapabilities getDesktopCapabilities() {
+        LOGGER.info("Emulating desktop on the browser");
         return DesiredCapabilities.chrome();
 	}
 }
