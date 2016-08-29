@@ -6,6 +6,8 @@ This is a Cucumber JVM project to test the scenario 3
 
 This project was coded and tested using macOSx. Therefore you need same to run it.
 
+Also is needed to have installed Chrome browser app (https://www.google.com/chrome/browser/desktop/)
+
 # Get the code
 
 Git:
@@ -27,8 +29,11 @@ Open a command window and run:
     ant run-tests
 
 This runs Cucumber features using Cucumber's Command Line Interface (CLI) runner. 
-And this runs the tests expected for the scenario 3
+
+And this runs the tests expected for the scenario 3.
 
 # Reports
 
-Once run, some html and junit reports will be generated inside william-hill/target folder
+Once run, some html and junit reports will be generated inside william-hill/target folder.
+
+HTML report will be displayed on the default web browser.
